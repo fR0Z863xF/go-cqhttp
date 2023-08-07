@@ -51,7 +51,8 @@ func newcli(t time.Duration) *http.Client {
 			TLSNextProto:        map[string]func(authority string, c *tls.Conn) http.RoundTripper{},
 			MaxIdleConnsPerHost: 999,
 		},
-		Timeout: t,
+		//Timeout: t,
+		Timeout: time.Minute * 3,
 	}
 }
 
