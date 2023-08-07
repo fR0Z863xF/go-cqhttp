@@ -35,7 +35,7 @@ var clienth2 = &http.Client{
 		MaxIdleConnsPerHost: 999,
 	},
 	//Timeout: time.Second * 15,
-	Timeout: time.Minute,
+	Timeout: time.Minute * 3,
 }
 
 func newcli(t time.Duration) *http.Client {
