@@ -34,7 +34,8 @@ var clienth2 = &http.Client{
 		ForceAttemptHTTP2:   true,
 		MaxIdleConnsPerHost: 999,
 	},
-	Timeout: time.Second * 15,
+	//Timeout: time.Second * 15,
+	Timeout: time.Minute,
 }
 
 func newcli(t time.Duration) *http.Client {
